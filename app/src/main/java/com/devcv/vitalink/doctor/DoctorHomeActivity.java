@@ -37,7 +37,7 @@ public class DoctorHomeActivity extends AppCompatActivity {
                 return true;
             } else if (itemId == R.id.nav_doctor_perfil) {
                 // TODO: Reemplazar con el fragmento de perfil
-                Toast.makeText(this, "Perfil (próximamente)", Toast.LENGTH_SHORT).show();
+                loadFragment(new DoctorPerfilFragment());
                 return true;
             }
             return false;
