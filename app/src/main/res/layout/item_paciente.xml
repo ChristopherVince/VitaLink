@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:layout_margin="8dp"
-    android:background="@drawable/abc_list_selector_background_transition_holo_light">
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="0dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground">
 
-    <TextView
-        android:id="@+id/textViewPatientName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre del Paciente"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/transparent">
 
-    <TextView
-        android:id="@+id/textViewPatientEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="correo@paciente.com"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/textViewPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Paciente"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewPatientEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="correo@paciente.com"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

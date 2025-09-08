@@ -1,53 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".doctor.DoctorCitasFragment">
 
+    <!-- Título -->
     <TextView
         android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Calendario de Citas"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:padding="16dp"/>
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Calendario -->
     <CalendarView
         android:id="@+id/calendarViewDoctor"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewTitle"/>
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Subtítulo de citas del día -->
     <TextView
         android:id="@+id/textViewCitasDelDia"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/calendarViewDoctor"
         android:text="Citas para hoy:"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/calendarViewDoctor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Lista de citas del día -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCitasDelDia"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/textViewCitasDelDia"
-        android:padding="8dp"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewCitasDelDia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Botón de acción flotante -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddCita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
         android:src="@android:drawable/ic_input_add"
         app:tint="@android:color/white"
-        android:contentDescription="Añadir Cita" />
+        android:contentDescription="Añadir Cita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
