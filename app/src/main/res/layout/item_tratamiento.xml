@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/abc_list_selector_background_transition_holo_light">
+
+    <TextView
+        android:id="@+id/textViewMedicineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Medicamento"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dosis"/>
+
+    <TextView
+        android:id="@+id/textViewTimeInfo" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info de la hora"
+        android:textSize="16sp"
+        android:layout_gravity="end"/>
+
+</LinearLayout>

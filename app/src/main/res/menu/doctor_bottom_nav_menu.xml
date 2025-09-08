@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_doctor_pacientes"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Pacientes"/>
+
+    <item
+        android:id="@+id/nav_doctor_citas"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Citas"/>
+
+    <item
+        android:id="@+id/nav_doctor_escaner"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Escáner"/>
+
+    <item
+        android:id="@+id/nav_doctor_perfil"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Perfil"/>
+</menu>

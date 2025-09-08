@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    tools:context=".doctor.DoctorAddPatientActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generar Código de Vinculación"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Presiona el botón para generar un código único. El código será válido por 10 minutos."
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/textViewGeneratedCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--- ---"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/buttonGenerateCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generar Código"/>
+
+</LinearLayout>
