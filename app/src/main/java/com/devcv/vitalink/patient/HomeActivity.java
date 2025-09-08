@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity {
                     loadFragment(new CitasFragment());
                     return true;
                 } else if (item.getItemId() == R.id.nav_escaner) {
-                    Toast.makeText(HomeActivity.this, "Sección Escáner", Toast.LENGTH_SHORT).show();
+                    loadFragment(new EscanerFragment());
                     return true;
                 } else if (item.getItemId() == R.id.nav_perfil) {
                     loadFragment(new PerfilFragment());
